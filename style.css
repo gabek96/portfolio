@@ -8,12 +8,11 @@
 
 img {
 	max-width: 55%; /* Ensures images never overflow their container */
-	height: auto; /* Maintains the aspect ratio */
-	border-radius: 8px; /* Adds rounded corners (optional) */
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+	max-height: 59%;
+	margin-bottom: auto;
+	border-radius: 16px; /* Adds rounded corners (optional) */
 	display: block; /* Removes inline spacing issues */
-	object-fit: cover; /* Ensures the image fills its container while maintaining aspect ratio */
-	margin: 0 auto;
+	margin: auto;
   }
 
   img {
@@ -67,6 +66,7 @@ footer {
 	margin-top: 10px;
 	text-decoration: none;
 	margin-right: 20px;
+	
 }
 
 body,
