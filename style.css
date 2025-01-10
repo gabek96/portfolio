@@ -5,6 +5,9 @@
 }
 
 
+strong {
+color:  #2898c1;
+}
 
 img {
 	max-width: 55%; /* Ensures images never overflow their container */
