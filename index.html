@@ -12,14 +12,6 @@
 </head>
 <body>
   <div id="root"></div>
-  <script>
-    window.onerror = function(msg, url, line, col, err) {
-      document.getElementById('root').innerHTML = '<pre style="color:red;padding:2rem;">Error: ' + msg + '\nAt: ' + url + ':' + line + ':' + col + '\n' + (err && err.stack || '') + '</pre>';
-    };
-    window.addEventListener('unhandledrejection', function(e) {
-      document.getElementById('root').innerHTML = '<pre style="color:red;padding:2rem;">Unhandled Promise: ' + e.reason + '</pre>';
-    });
-  </script>
   <script type="module" src="/src/main.jsx"></script>
 </body>
 </html>

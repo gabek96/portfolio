@@ -5,18 +5,28 @@ export default function AnimatedSection({ children, className = '', delay = 0 })
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    const el = ref.current;
+    if (!el) { setIsVisible(true); return; }
+
+    // Fallback: ensure content is visible even if IntersectionObserver doesn't fire
+    const fallback = setTimeout(() => setIsVisible(true), 800);
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
+          clearTimeout(fallback);
           observer.unobserve(entry.target);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.05, rootMargin: '50px' }
     );
 
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
+    observer.observe(el);
+    return () => {
+      observer.disconnect();
+      clearTimeout(fallback);
+    };
   }, []);
 
   return (

@@ -3,12 +3,8 @@ import ReactDOM from 'react-dom/client'
 import App from './App'
 import './index.css'
 
-try {
-  ReactDOM.createRoot(document.getElementById('root')).render(
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  )
-} catch (err) {
-  document.getElementById('root').innerHTML = `<pre style="color:red;padding:2rem;">${err.message}\n${err.stack}</pre>`
-}
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+)
