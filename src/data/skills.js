@@ -1,0 +1,17 @@
+export const skills = [
+  { name: "C", icon: "fas fa-code" },
+  { name: "Java", icon: "fab fa-java" },
+  { name: "JavaScript", icon: "fab fa-js" },
+  { name: "HTML/CSS", icon: "fab fa-html5" },
+  { name: "PHP", icon: "fab fa-php" },
+  { name: "Python", icon: "fab fa-python" },
+  { name: "React", icon: "fab fa-react" },
+  { name: "React Native", icon: "fab fa-react" },
+  { name: "Spring Boot", icon: "fas fa-leaf" },
+  { name: "Git", icon: "fab fa-git-alt" },
+  { name: "MySQL", icon: "fas fa-database" },
+  { name: "AWS", icon: "fab fa-aws" },
+  { name: "Postman", icon: "fas fa-paper-plane" },
+  { name: "Netlify", icon: "fas fa-globe" },
+  { name: "Vite", icon: "fas fa-bolt" },
+];
