@@ -1,0 +1,41 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls \"/c/Users/miles/Downloads/\"Gabriel_Kiveu*)",
+      "Bash(ls \"C:/Users/miles/Downloads/\"Gabriel_Kiveu*)",
+      "Bash(ls -la /d/portfolio/*.html)",
+      "Bash(npm create vite@latest . -- --template react)",
+      "Bash(npm init -y)",
+      "Bash(npm install react react-dom react-router-dom)",
+      "Bash(npm install -D vite @vitejs/plugin-react tailwindcss @tailwindcss/vite)",
+      "Bash(npm run build)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(ls /d/portfolio/node_modules/.bin/vite*)",
+      "Bash(git add index.html .gitignore .github/workflows/deploy.yml package.json package-lock.json vite.config.js src/ public/)",
+      "Bash(git rm -r Images/ about.html projects.html style.css work.html)",
+      "Bash(git commit:*)",
+      "Bash(git push origin main)",
+      "Bash(gh run list --limit 3)",
+      "WebFetch(domain:gabek96.github.io)",
+      "Bash(git add vite.config.js)",
+      "Bash(git push)",
+      "Bash(gh run list --limit 5)",
+      "Bash(\"C:\\\\Program Files\\\\GitHub CLI\\\\gh.exe\" run list --limit 5)",
+      "Bash(\"C:\\\\Users\\\\miles\\\\AppData\\\\Local\\\\GitHub CLI\\\\gh.exe\" run list --limit 5)",
+      "Bash(where.exe gh)",
+      "Bash(powershell.exe -Command \"Get-Command gh -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Source\")",
+      "Bash(powershell.exe -Command \"Invoke-WebRequest -Uri ''https://gabek96.github.io/portfolio/'' -UseBasicParsing | Select-Object -ExpandProperty Content\")",
+      "Bash(powershell.exe -Command \"\\(Invoke-WebRequest -Uri ''https://gabek96.github.io/portfolio/'' -UseBasicParsing\\).Content\")",
+      "Bash(powershell.exe -Command \"\\(Invoke-WebRequest -Uri ''https://gabek96.github.io/portfolio/assets/index-DAtthtWI.js'' -UseBasicParsing\\).StatusCode\")",
+      "Bash(git add index.html src/main.jsx)",
+      "Bash(powershell.exe -Command \"Start-Sleep -Seconds 2; \\(Invoke-WebRequest -Uri ''http://localhost:8888/portfolio/'' -UseBasicParsing\\).Content\")",
+      "Bash(powershell.exe -Command \"\\(Invoke-WebRequest -Uri ''https://gabek96.github.io/portfolio/assets/index-DAtthtWI.js'' -UseBasicParsing\\).Content.Substring\\(0, 500\\)\")",
+      "Bash(powershell.exe -Command \"try { \\(Invoke-WebRequest -Uri ''https://gabek96.github.io/portfolio/assets/index-Cq3N5ccD.css'' -UseBasicParsing\\).StatusCode } catch { $_Exception.Response.StatusCode.Value__ }\")",
+      "Bash(powershell.exe -Command \"try { \\(Invoke-WebRequest -Uri ''https://gabek96.github.io/portfolio/src/main.jsx'' -UseBasicParsing\\).StatusCode } catch { $_Exception.Response.StatusCode.Value__ }\")",
+      "Bash(powershell.exe -Command \"try { $r = Invoke-WebRequest -Uri ''https://gabek96.github.io/portfolio/assets/index-BvFf531U.js'' -UseBasicParsing; $r.StatusCode } catch { ''FAILED: '' + $_Exception.Message }\")",
+      "Bash(powershell.exe -Command 'try { $r = Invoke-WebRequest -Uri \"\"https://gabek96.github.io/portfolio/assets/index-BvFf531U.js\"\" -UseBasicParsing; $r.StatusCode } catch { \"\"FAILED: \"\" + $_.Exception.Message }')",
+      "Bash(powershell.exe -Command '\\(Invoke-WebRequest -Uri \"\"https://gabek96.github.io/portfolio/\"\" -UseBasicParsing\\).Content')",
+      "Bash(git add src/components/ui/AnimatedSection.jsx src/main.jsx index.html)"
+    ]
+  }
+}
