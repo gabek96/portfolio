@@ -16,9 +16,9 @@ export default function ClubCard({ club }) {
           <p className="text-text font-semibold italic mb-2">{club.role}</p>
         )}
         {club.descriptions.map((desc, i) => (
-          <p key={i} className="text-muted leading-relaxed text-sm mb-1">
-            {desc}
-          </p>
+          <p key={i} className="text-muted leading-relaxed text-sm mb-1"
+            dangerouslySetInnerHTML={{ __html: desc }}
+          />
         ))}
       </div>
     </div>

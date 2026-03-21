@@ -2,18 +2,30 @@ export const clubs = [
   {
     name: "National Society of Black Engineers",
     role: "Programs Chair",
+    date: "Fall 2025 – Present",
     image: "images/NSBE.png",
     descriptions: [
-      "Planned and executed 30+ events as Programs Chair, ranging from technical workshops and academic support to fostering cross-organizational partnerships to host inclusive, large-scale events.",
-      "Co-founded Ladies of NSBE with the chapter secretary, establishing a dedicated space for women-focused events.",
+      "Planned and executed <strong>30+ events</strong> — workshops, corporate networking sessions — coordinating across student orgs, university departments, and industry sponsors, resulting in <strong>increased engagement</strong> and new corporate partnerships at the chapter and zone level.",
+      "<strong>Co-founded Ladies of NSBE</strong> to fill the gap in women-focused engineering programming, building the track from scratch and establishing a recurring empowerment workshop series.",
     ],
   },
   {
     name: "The Cookout",
     role: "Treasurer",
+    date: "Fall 2025 – Present",
     image: "images/C.png",
     descriptions: [
-      "Manage event budgets, reimbursements, and financial reporting while securing cross-organizational collaborations that expanded cultural programming reach.",
+      "Managed <strong>budgets, reimbursements, and financial reporting</strong> while securing cross-organizational collaborations, expanding cultural programming reach and <strong>increasing event attendance</strong>.",
+    ],
+  },
+  {
+    name: "Destination Iowa State",
+    role: "Team Leader",
+    date: "Fall 2023 – Fall 2025",
+    image: "images/isu.png",
+    descriptions: [
+      "Led incoming freshmen through structured campus onboarding, delivering experience-based guidance that helped new students set <strong>realistic academic and social expectations</strong> from day one.",
+      "Selected for a <strong>peer advisory panel</strong> to support fellow Team Leaders navigating difficult student situations in real time, recognized by program leadership for judgment and communication skills.",
     ],
   },
   {

@@ -1,12 +1,11 @@
 export const projects = [
   {
     id: 1,
-    title: "Calendar Converter",
+    title: "NEAT (NSBE Event Attendance Tracker)",
     date: "January 2026 - Present",
     descriptions: [
-      'Calendar Converter is a web app built in <strong>React</strong> that lets users upload Excel or CSV spreadsheets and convert them into <strong>.ics calendar files</strong> they can import into Google Calendar, Outlook, or Apple Calendar.',
-      'The app uses <strong>SheetJS</strong> to parse uploaded files and includes <strong>smart column auto-detection</strong> logic that identifies date, time, title, and location columns automatically — handling edge cases like Excel serial date conversion so users don\'t have to manually map their data.',
-      'Deployed as a <strong>Progressive Web App (PWA)</strong> via <strong>Netlify</strong> using <strong>Vite</strong> as the build tool, making it installable on mobile and desktop and usable fully offline after the first visit.',
+      'Built a <strong>React PWA</strong> to solve recurring miscommunication and task delegation failures in the NSBE chapter — centralizing event info, task assignments, and attendance tracking in one platform for chapter leadership.',
+      'Deployed via <strong>Netlify</strong> using <strong>Vite</strong> and <strong>SheetJS</strong>, delivering a no-install, browser-based tool accessible to any chapter member on any device.',
     ],
     tools: ["React", "JavaScript", "Vite", "SheetJS", "Netlify"],
     links: {},
@@ -16,9 +15,9 @@ export const projects = [
     title: "Makerspace Tracker",
     date: "April 2024 - Current",
     descriptions: [
-      'The Makerspace Tracker is a web-based system developed for the Student Innovation Center to support the daily operations of its makerspaces. It provides students and staff with a central place to complete required training, register for hands-on training sessions, and keep track of their progress.',
-      'In addition to supporting individual users, the system gives administrators valuable insights into makerspace activity, such as popular hours, equipment usage, and overall visitor statistics.',
-      'Beyond makerspace operations, the tracker is also used to monitor attendance at campus events, helping organizers better understand who attends and when participation is highest. While the system is already in use, it continues to evolve, with opportunities for significant future improvements.',
+      'Built a production <strong>PHP/MySQL</strong> web app serving <strong>6,000+ users</strong> at the Student Innovation Center, replacing a fragmented check-in process with <strong>real-time usage tracking</strong> and <strong>role-based access control</strong>.',
+      'Developed a <strong>stats and analytics dashboard</strong> surfacing attendance trends, giving staff actionable data for scheduling and resource allocation decisions.',
+      'Built an <strong>email and attendance export system</strong> with filters for makerspace location and date range, outputting to Excel or clipboard — eliminating manual data collection for staff.',
     ],
     tools: ["PHP", "HTML", "CSS", "JavaScript", "MySQL", "Git", "Python"],
     links: {},
@@ -58,9 +57,8 @@ export const projects = [
     title: "Cy-Hill",
     date: "August 2024 - December 2024",
     descriptions: [
-      'Cy-Hill is a team-based game built in <strong>Java</strong> with <strong>Spring Boot</strong>, where players compete to capture hills scattered across Iowa State\'s campus. The backend manages real-time player actions, dynamic scoring, and a <strong>live leaderboard</strong>.',
-      'Built <strong>RESTful APIs</strong> and <strong>MySQL</strong> database logic to handle player state, coin transactions, and a level-up system that exchanges coins for experience points based on hill donations.',
-      'Created a WebSocket connection to display live events on the map in real-time when players are logged in. Developed across a <strong>4-person team</strong> using <strong>Agile-style Git feature branching</strong> for coordinated delivery.',
+      'Architected a <strong>Java/Spring Boot</strong> multiplayer campus exploration game with <strong>RESTful APIs</strong> and <strong>MySQL</strong> to help new students learn Iowa State\'s campus environment — delivering real-time player actions, dynamic scoring, and a <strong>live leaderboard</strong>.',
+      'Developed across a <strong>4-person Agile team</strong>, demoed as a fully functional system at end of semester.',
     ],
     tools: ["Spring Boot", "Java", "MySQL", "Git", "REST APIs"],
     links: {
