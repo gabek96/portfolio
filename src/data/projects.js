@@ -1,7 +1,7 @@
 export const projects = [
   {
     id: 1,
-    title: "NEAT (NSBE Event Attendance Tracker)",
+    title: "GEP (Gabe's Event Planner)",
     date: "January 2026 - Present",
     descriptions: [
       'Built a <strong>React PWA</strong> to solve recurring miscommunication and task delegation failures in the NSBE chapter — centralizing event info, task assignments, and attendance tracking in one platform for chapter leadership.',
