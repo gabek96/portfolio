@@ -1,9 +1,11 @@
 import AnimatedSection from '../components/ui/AnimatedSection';
+import StatSection from '../components/ui/StatSection';
 
 export default function HomePage() {
   const basePath = import.meta.env.BASE_URL;
 
   return (
+    <>
     <section className="max-w-5xl mx-auto px-6 py-16 md:py-24 flex flex-col-reverse md:flex-row items-center gap-10 min-h-[70vh]">
       <AnimatedSection className="flex-1 text-center md:text-left">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-text font-heading mb-2">
@@ -57,5 +59,12 @@ export default function HomePage() {
         />
       </AnimatedSection>
     </section>
+
+    <section className="max-w-5xl mx-auto px-6 pb-20">
+      <AnimatedSection delay={100}>
+        <StatSection />
+      </AnimatedSection>
+    </section>
+    </>
   );
 }
