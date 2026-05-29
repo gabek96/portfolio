@@ -1,13 +1,50 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { skills } from '../data/skills';
 import { clubs } from '../data/clubs';
 import SectionTitle from '../components/ui/SectionTitle';
-import SkillCard from '../components/ui/SkillCard';
 import ClubCard from '../components/ui/ClubCard';
 import AnimatedSection from '../components/ui/AnimatedSection';
 
+const SKILL_GROUPS = [
+  { label: 'Languages', col: 'md:col-span-2', names: ['C', 'Java', 'JavaScript', 'HTML/CSS', 'PHP', 'Python'] },
+  { label: 'Frameworks', col: 'md:col-span-1', names: ['React', 'React Native', 'Node.js', 'Nest.js'] },
+  { label: 'Databases', col: 'md:col-span-1', names: ['MySQL', 'PostgreSQL', 'MongoDB'] },
+  { label: 'Cloud & Tools', col: 'md:col-span-2', names: ['AWS', 'Google Cloud', 'Git'] },
+];
+
+function BentoSkills({ skills }) {
+  const byName = Object.fromEntries(skills.map(s => [s.name, s]));
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+      {SKILL_GROUPS.map(group => (
+        <div
+          key={group.label}
+          className={`${group.col} bg-card border border-border rounded-xl p-5 hover:border-primary/30 transition-colors duration-200`}
+        >
+          <p className="font-mono text-xs text-primary/60 uppercase tracking-widest mb-3">{group.label}</p>
+          <div className="flex flex-wrap gap-2">
+            {group.names.map(name => {
+              const skill = byName[name];
+              return (
+                <span
+                  key={name}
+                  className="inline-flex items-center gap-1.5 bg-card-light border border-border/60 rounded-lg px-2.5 py-1.5 text-xs text-text hover:-translate-y-0.5 transition-transform duration-150 cursor-default"
+                >
+                  {skill && <FontAwesomeIcon icon={skill.icon} className="text-primary" />}
+                  {name}
+                </span>
+              );
+            })}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export default function AboutPage() {
   return (
-    <div className="max-w-4xl mx-auto px-6 py-16">
+    <div className="max-w-5xl mx-auto px-6 py-16">
       {/* About Me */}
       <AnimatedSection>
         <SectionTitle>About Me</SectionTitle>
@@ -47,13 +84,7 @@ export default function AboutPage() {
       {/* Technical Skills */}
       <AnimatedSection delay={200}>
         <SectionTitle>Technical Skills</SectionTitle>
-        <div className="flex flex-wrap gap-6 justify-center">
-          {skills.map((skill, i) => (
-            <AnimatedSection key={skill.name} delay={250 + i * 50}>
-              <SkillCard name={skill.name} icon={skill.icon} />
-            </AnimatedSection>
-          ))}
-        </div>
+        <BentoSkills skills={skills} />
       </AnimatedSection>
     </div>
   );

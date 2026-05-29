@@ -1,8 +1,20 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import TechBadge from './TechBadge';
 
 export default function ProjectCard({ project }) {
   return (
-    <div className="bg-card border border-border rounded-xl p-6 hover:-translate-y-1 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 flex flex-col">
+    <div className="bg-card border border-border rounded-xl overflow-hidden hover:-translate-y-1 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 flex flex-col">
+      {/* Visual header */}
+      <div
+        className="h-28 flex items-center justify-center border-b border-border/50 flex-shrink-0"
+        style={{
+          background: `linear-gradient(135deg, ${project.accentColor}28 0%, ${project.accentColor}08 100%)`,
+        }}
+      >
+        <FontAwesomeIcon icon={project.faIcon} style={{ fontSize: '3rem', color: project.accentColor }} />
+      </div>
+
+      <div className="p-6 flex flex-col flex-1">
       <div className="mb-3">
         <div className="flex justify-between items-start flex-wrap gap-2 mb-1">
           <h3 className="text-primary uppercase tracking-wider font-bold text-lg">
@@ -62,6 +74,7 @@ export default function ProjectCard({ project }) {
           )}
         </div>
       )}
+      </div>
     </div>
   );
 }

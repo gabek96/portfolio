@@ -2,7 +2,7 @@ export const workExperience = [
   {
     id: 1,
     title: "Community & Research Full-Stack Developer",
-    company: "Dinder · CYStarters, Iowa State University",
+    company: "Dinder, Iowa State University",
     date: "Fall 2025 - Spring 2026",
     timelineYear: "2025 - 2026",
     bullets: [

@@ -1,7 +1,11 @@
+import { faCalendarDays, faChartBar, faGamepad, faBookOpen, faMap, faRobot, faStopwatch } from '@fortawesome/free-solid-svg-icons';
+
 export const projects = [
   {
     id: 1,
     title: "GEP (Gabe's Event Planner)",
+    faIcon: faCalendarDays,
+    accentColor: "#3b82f6",
     date: "January 2026 - Present",
     descriptions: [
       'Built a <strong>React PWA</strong> to solve recurring miscommunication and task delegation failures in the NSBE chapter — centralizing event info, task assignments, and attendance tracking in one platform for chapter leadership.',
@@ -13,6 +17,8 @@ export const projects = [
   {
     id: 2,
     title: "Makerspace Tracker",
+    faIcon: faChartBar,
+    accentColor: "#8b5cf6",
     date: "April 2024 - Current",
     descriptions: [
       'Built a production <strong>PHP/MySQL</strong> web app serving <strong>6,000+ users</strong> at the Student Innovation Center, replacing a fragmented check-in process with <strong>real-time usage tracking</strong> and <strong>role-based access control</strong>.',
@@ -25,6 +31,8 @@ export const projects = [
   {
     id: 3,
     title: "One Step",
+    faIcon: faGamepad,
+    accentColor: "#22c55e",
     date: "December 2023 - August 2025",
     descriptions: [
       'One Step is a 2D pixel-based adventure game developed in <strong>Java</strong>. Designed to explore the fundamentals of game architecture, rendering, and object interaction. The project focuses on smooth character motion, environmental interaction, and tile-based world mapping, combining art and code into a cohesive gameplay experience.',
@@ -40,6 +48,8 @@ export const projects = [
   {
     id: 4,
     title: "Top-Shelf",
+    faIcon: faBookOpen,
+    accentColor: "#ef4444",
     date: "November 2023",
     descriptions: [
       'Solo-designed and built a responsive comic browsing app using <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, and <strong>Bootstrap</strong>.',
@@ -55,6 +65,8 @@ export const projects = [
   {
     id: 5,
     title: "Cy-Hill",
+    faIcon: faMap,
+    accentColor: "#f59e0b",
     date: "August 2024 - December 2024",
     descriptions: [
       'Architected a <strong>Java/Spring Boot</strong> multiplayer campus exploration game with <strong>RESTful APIs</strong> and <strong>MySQL</strong> to help new students learn Iowa State\'s campus environment — delivering real-time player actions, dynamic scoring, and a <strong>live leaderboard</strong>.',
@@ -69,6 +81,8 @@ export const projects = [
   {
     id: 6,
     title: "R.A.D.C (Remote Autonomous Disaster Cleanup)",
+    faIcon: faRobot,
+    accentColor: "#06b6d4",
     date: "August 2024 - December 2024",
     descriptions: [
       'Using <strong>Roomba</strong> as the main component for this project, a user-centered sketch was created to demonstrate our project\'s reliability in reaching hazardous areas and efficiently completing missions.',
@@ -84,6 +98,8 @@ export const projects = [
   {
     id: 7,
     title: "Time Counter",
+    faIcon: faStopwatch,
+    accentColor: "#a855f7",
     date: "April 2024 - May 2024",
     descriptions: [
       'Developed using <strong>Verilog</strong> that can set and countdown times dependent on the user\'s input. Users input a number using the side switches displayed on the seven-segment display.',

@@ -38,8 +38,8 @@ export default function Navbar() {
                 className={({ isActive }) =>
                   `block px-4 py-2 rounded-lg text-sm font-bold transition-all duration-200 ${
                     isActive
-                      ? 'text-white bg-white/15'
-                      : 'text-white/80 hover:text-white hover:bg-white/10'
+                      ? 'text-primary bg-primary/15'
+                      : 'text-white/70 hover:text-white hover:bg-white/10'
                   }`
                 }
               >

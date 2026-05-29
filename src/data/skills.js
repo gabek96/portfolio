@@ -1,18 +1,26 @@
+import {
+  faCode, faServer, faDatabase, faLeaf,
+} from '@fortawesome/free-solid-svg-icons';
+import {
+  faJava, faJs, faHtml5, faPhp, faPython,
+  faReact, faNodeJs, faGitAlt, faAws, faGoogle,
+} from '@fortawesome/free-brands-svg-icons';
+
 export const skills = [
-  { name: "C", icon: "fas fa-code" },
-  { name: "Java", icon: "fab fa-java" },
-  { name: "JavaScript", icon: "fab fa-js" },
-  { name: "HTML/CSS", icon: "fab fa-html5" },
-  { name: "PHP", icon: "fab fa-php" },
-  { name: "Python", icon: "fab fa-python" },
-  { name: "React", icon: "fab fa-react" },
-  { name: "React Native", icon: "fab fa-react" },
-  { name: "Node.js", icon: "fab fa-node-js" },
-  { name: "Nest.js", icon: "fas fa-server" },
-  { name: "Git", icon: "fab fa-git-alt" },
-  { name: "MySQL", icon: "fas fa-database" },
-  { name: "PostgreSQL", icon: "fas fa-database" },
-  { name: "MongoDB", icon: "fas fa-leaf" },
-  { name: "AWS", icon: "fab fa-aws" },
-  { name: "Google Cloud", icon: "fab fa-google" },
+  { name: "C",            icon: faCode      },
+  { name: "Java",         icon: faJava      },
+  { name: "JavaScript",   icon: faJs        },
+  { name: "HTML/CSS",     icon: faHtml5     },
+  { name: "PHP",          icon: faPhp       },
+  { name: "Python",       icon: faPython    },
+  { name: "React",        icon: faReact     },
+  { name: "React Native", icon: faReact     },
+  { name: "Node.js",      icon: faNodeJs    },
+  { name: "Nest.js",      icon: faServer    },
+  { name: "Git",          icon: faGitAlt    },
+  { name: "MySQL",        icon: faDatabase  },
+  { name: "PostgreSQL",   icon: faDatabase  },
+  { name: "MongoDB",      icon: faLeaf      },
+  { name: "AWS",          icon: faAws       },
+  { name: "Google Cloud", icon: faGoogle    },
 ];
