@@ -6,10 +6,10 @@ import ClubCard from '../components/ui/ClubCard';
 import AnimatedSection from '../components/ui/AnimatedSection';
 
 const SKILL_GROUPS = [
-  { label: 'Languages', col: 'md:col-span-2', names: ['C', 'Java', 'JavaScript', 'HTML/CSS', 'PHP', 'Python'] },
-  { label: 'Frameworks', col: 'md:col-span-1', names: ['React', 'React Native', 'Node.js', 'Nest.js'] },
-  { label: 'Databases', col: 'md:col-span-1', names: ['MySQL', 'PostgreSQL', 'MongoDB'] },
-  { label: 'Cloud & Tools', col: 'md:col-span-2', names: ['AWS', 'Google Cloud', 'Git'] },
+  { label: 'Languages',    col: 'md:col-span-2', color: '#496580', names: ['C', 'Java', 'JavaScript', 'HTML/CSS', 'PHP', 'Python'] },
+  { label: 'Frameworks',   col: 'md:col-span-1', color: '#c17c3a', names: ['React', 'React Native', 'Node.js', 'Nest.js'] },
+  { label: 'Databases',    col: 'md:col-span-1', color: '#7c3aed', names: ['MySQL', 'PostgreSQL', 'MongoDB'] },
+  { label: 'Cloud & Tools',col: 'md:col-span-2', color: '#2e7d6e', names: ['AWS', 'Google Cloud', 'Git'] },
 ];
 
 function BentoSkills({ skills }) {
@@ -19,9 +19,10 @@ function BentoSkills({ skills }) {
       {SKILL_GROUPS.map(group => (
         <div
           key={group.label}
-          className={`${group.col} bg-card border border-border rounded-xl p-5 hover:border-primary/30 transition-colors duration-200`}
+          className={`${group.col} bg-card border border-border rounded-xl p-5 transition-colors duration-200`}
+          style={{ borderLeftColor: group.color, borderLeftWidth: '4px' }}
         >
-          <p className="font-mono text-xs text-primary/60 uppercase tracking-widest mb-3">{group.label}</p>
+          <p className="font-mono text-xs uppercase tracking-widest mb-3" style={{ color: group.color }}>{group.label}</p>
           <div className="flex flex-wrap gap-2">
             {group.names.map(name => {
               const skill = byName[name];
@@ -30,7 +31,7 @@ function BentoSkills({ skills }) {
                   key={name}
                   className="inline-flex items-center gap-1.5 bg-card-light border border-border/60 rounded-lg px-2.5 py-1.5 text-xs text-text hover:-translate-y-0.5 transition-transform duration-150 cursor-default"
                 >
-                  {skill && <FontAwesomeIcon icon={skill.icon} className="text-primary" />}
+                  {skill && <FontAwesomeIcon icon={skill.icon} style={{ color: group.color }} />}
                   {name}
                 </span>
               );
@@ -48,6 +49,9 @@ export default function AboutPage() {
       {/* About Me */}
       <AnimatedSection>
         <SectionTitle>About Me</SectionTitle>
+
+
+
         <div className="space-y-4 mb-16">
           <p className="text-text text-lg leading-relaxed">
             I was just a kid from Olathe who loved video games and computers. I wasn't thinking about a career — I just liked the technology. 

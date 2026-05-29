@@ -21,7 +21,7 @@ export default function TimelineItem({ job, index }) {
             : 'mr-[55%] pr-10 max-md:mr-0 max-md:pl-5'
         }`}
       >
-        <div className="bg-card border border-border rounded-xl p-6 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/20 transition-all duration-300">
+        <div className="bg-card border border-border border-l-4 border-l-primary rounded-xl p-6 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/20 transition-all duration-300">
           <div className="mb-3">
             <h3 className="text-primary uppercase tracking-wider font-bold text-base mb-1">
               {job.title}

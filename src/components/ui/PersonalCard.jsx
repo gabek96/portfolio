@@ -4,11 +4,11 @@ import { useEffect, useRef, useState } from 'react';
 // Each fact can use either an emoji OR an image/gif URL — add  image: 'https://...'
 // to any entry and it will display instead of the emoji.
 const FACTS = [
-  { category: 'Favorite Movie',   value: 'Your Favorite Movie',   emoji: '🎬' },
+  { category: 'Favorite Movie',   value: 'Spider-Man Across the Spider-Verse',   emoji: '🎬', image: 'https://i.ebayimg.com/images/g/x4YAAOSwWBBk-BfS/s-l1600.jpg' },
   { category: 'Favorite Pokémon', value: 'Greninja',      emoji: '⚡' , image: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e57c0ca5-c162-43e7-b0dc-40f215c30321/dkj3uf3-dda93834-5372-4956-814c-aa17dcd7479b.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi9lNTdjMGNhNS1jMTYyLTQzZTctYjBkYy00MGYyMTVjMzAzMjEvZGtqM3VmMy1kZGE5MzgzNC01MzcyLTQ5NTYtODE0Yy1hYTE3ZGNkNzQ3OWIuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.7wVbH-6B1A8sGyJBIPh1B8Y-8B1whFAC_hoM1sA4ZnQ'  },
   { category: 'Favorite Game',    value: 'Your Favorite Game',    emoji: '🎮' },
   { category: 'Favorite Food',    value: 'Your Favorite Food',    emoji: '🍕' },
-  { category: 'Hometown',         value: 'Your Hometown',         emoji: '🏙️' },
+  { category: 'Favorite Superhero', value: 'Spider-Man', emoji: '🦸‍♂️', image: 'https://www.fightersgeneration.com/characters3/spidey-walk1.gif' },
   { category: 'Binge-Watching',   value: 'Your Fav Show',         emoji: '📺' },
 ];
 
@@ -57,9 +57,9 @@ export default function PersonalCard() {
       {/* Title bar */}
       <div className="border-b border-border px-5 py-3 bg-card-light flex items-center gap-3 flex-shrink-0">
         <div className="flex gap-1.5">
-          <span className="w-2.5 h-2.5 rounded-full bg-border" />
-          <span className="w-2.5 h-2.5 rounded-full bg-border" />
-          <span className="w-2.5 h-2.5 rounded-full bg-primary" />
+          <span className="w-2.5 h-2.5 rounded-full" style={{ background: '#EF4444' }} />
+          <span className="w-2.5 h-2.5 rounded-full" style={{ background: '#F59E0B' }} />
+          <span className="w-2.5 h-2.5 rounded-full" style={{ background: '#22C55E' }} />
         </div>
         <span className="font-mono text-sm text-primary tracking-widest ml-1">PLAYER INFO</span>
       </div>
@@ -93,7 +93,7 @@ export default function PersonalCard() {
               className="h-2 rounded-full transition-all duration-300 cursor-pointer"
               style={{
                 width: i === index ? '1.5rem' : '0.5rem',
-                background: i === index ? '#2898c1' : '#333333',
+                background: i === index ? '#496580' : '#E0D6CC',
               }}
             />
           ))}

@@ -5,7 +5,7 @@ import AnimatedSection from '../components/ui/AnimatedSection';
 
 export default function WorkPage() {
   return (
-    <div className="max-w-5xl mx-auto px-6 py-16">
+    <div className="px-6 md:px-12 lg:px-20 py-16 max-w-6xl mx-auto">
       <SectionTitle>Work Experience</SectionTitle>
 
       {/* Timeline */}

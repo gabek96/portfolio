@@ -8,17 +8,18 @@ export default function HomePage() {
   return (
     <section
       className="px-6 md:px-12 lg:px-20 py-10 md:py-16 flex flex-col gap-10"
-      style={{ background: 'linear-gradient(160deg, rgba(40,152,193,0.07) 0%, transparent 45%)' }}
+      style={{ background: 'linear-gradient(160deg, rgba(255,219,187,0.25) 0%, transparent 45%)' }}
     >
       {/* Hero row */}
       <div className="flex flex-col-reverse md:flex-row items-start gap-10">
         <AnimatedSection className="flex-1">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-text font-heading mb-2">
-            Hi, I'm <span className="text-primary">Gabriel Kiveu</span>!
+            Hi, I'm{' '}
+            <span style={{
+              color: '#496580',
+            }}>Gabriel Kiveu</span>!
           </h1>
-          <p className="font-mono text-sm text-primary/70 tracking-[0.15em] uppercase mb-5">
-            Full-Stack Software Engineer
-          </p>
+
           <div className="flex gap-4 mb-5">
             <a
               href="https://github.com/gabek96"
@@ -40,7 +41,7 @@ export default function HomePage() {
             </a>
           </div>
           <p className="text-xl text-muted font-light leading-relaxed mb-8 max-w-xl">
-            I build full-stack products that real people use.
+            From idea to production — I build things that hold up.
           </p>
           <div className="flex gap-4">
             <a

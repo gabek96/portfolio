@@ -13,16 +13,21 @@ export default function Navbar() {
   const basePath = import.meta.env.BASE_URL;
 
   return (
-    <nav className="sticky top-0 z-50 bg-nav/95 backdrop-blur-md px-6 py-3">
+    <nav className="sticky top-0 z-50 bg-nav/90 backdrop-blur-md border-b border-border px-6 py-3">
       <div className="max-w-6xl mx-auto flex items-center justify-between">
         {/* Mobile hamburger */}
         <button
-          className="md:hidden text-white text-2xl"
+          className="md:hidden text-text text-2xl"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
           <i className={`fas ${menuOpen ? 'fa-times' : 'fa-bars'}`}></i>
         </button>
+
+        {/* Monogram */}
+        <a href="#/" className="w-9 h-9 rounded-lg bg-primary flex items-center justify-center font-bold text-sm text-white font-heading tracking-tight flex-shrink-0 hover:bg-primary-dark transition-colors duration-200">
+          GK
+        </a>
 
         {/* Nav links */}
         <ul
@@ -38,8 +43,8 @@ export default function Navbar() {
                 className={({ isActive }) =>
                   `block px-4 py-2 rounded-lg text-sm font-bold transition-all duration-200 ${
                     isActive
-                      ? 'text-primary bg-primary/15'
-                      : 'text-white/70 hover:text-white hover:bg-white/10'
+                      ? 'text-primary bg-primary/10'
+                      : 'text-muted hover:text-text hover:bg-surface'
                   }`
                 }
               >
