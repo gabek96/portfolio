@@ -5,14 +5,16 @@ import AnimatedSection from '../components/ui/AnimatedSection';
 
 export default function ProjectsPage() {
   return (
-    <div className="max-w-6xl mx-auto px-6 py-16">
+    <div className="px-6 md:px-12 lg:px-20 py-16">
       <SectionTitle>My Projects</SectionTitle>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+      <div className="columns-1 md:columns-2 xl:columns-3 gap-5">
         {projects.map((project, i) => (
-          <AnimatedSection key={project.id} delay={i * 100}>
-            <ProjectCard project={project} />
-          </AnimatedSection>
+          <div key={project.id} className="break-inside-avoid mb-5">
+            <AnimatedSection delay={i * 100}>
+              <ProjectCard project={project} />
+            </AnimatedSection>
+          </div>
         ))}
       </div>
     </div>

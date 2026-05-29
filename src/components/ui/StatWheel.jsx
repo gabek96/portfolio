@@ -2,11 +2,11 @@ import { useEffect, useRef, useState } from 'react';
 
 export const STATS = [
   { abbr: 'STR', label: 'Full-Stack',   value: 90 },
-  { abbr: 'INT', label: 'Sys Design',   value: 85 },
+  { abbr: 'INT', label: 'Funny',   value: 120 },
   { abbr: 'DEX', label: 'Frontend',     value: 80 },
   { abbr: 'WIS', label: 'Leadership',   value: 83 },
-  { abbr: 'CHA', label: 'Teamwork',     value: 92 },
-  { abbr: 'END', label: 'DevOps',       value: 70 },
+  { abbr: 'CHA', label: 'Chatterbox',     value: 110 },
+  { abbr: 'END', label: 'DevOps',       value: 60 },
 ];
 
 const CX = 140, CY = 140, R = 90, RINGS = 4, N = STATS.length;

@@ -12,7 +12,10 @@ export const projects = [
       'Deployed via <strong>Netlify</strong> using <strong>Vite</strong> and <strong>SheetJS</strong>, delivering a no-install, browser-based tool accessible to any chapter member on any device.',
     ],
     tools: ["React", "JavaScript", "Vite", "SheetJS", "Netlify"],
-    links: {},
+    links: {
+      github: "https://github.com/gabek96/calendar-converter",
+      website: "https://gabeventplanning.netlify.app/",
+    },
   },
   {
     id: 2,

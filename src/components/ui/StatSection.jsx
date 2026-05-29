@@ -27,8 +27,8 @@ export default function StatSection() {
           <span className="w-2.5 h-2.5 rounded-full bg-border" />
           <span className="w-2.5 h-2.5 rounded-full bg-primary" />
         </div>
-        <span className="font-mono text-sm text-primary tracking-widest ml-1">DEVELOPER STATS</span>
-        <span className="ml-auto font-mono text-xs text-muted">LVL 4</span>
+        <span className="font-mono text-sm text-primary tracking-widest ml-1">Player Stats</span>
+        <span className="ml-auto font-mono text-xs text-muted">LVL 21</span>
       </div>
 
       {/* Content */}
