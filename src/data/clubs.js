@@ -34,7 +34,7 @@ export const clubs = [
   {
     name: "The Salt Company",
     role: "Member",
-    image: "images/TSCo.png",
+    image: "images/TSCo(dark).png",
     descriptions: [
       "A college ministry I've been part of throughout my time at Iowa State — a community that has been a consistent anchor and deepened my faith in a meaningful way.",
     ],

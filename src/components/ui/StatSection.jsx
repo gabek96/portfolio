@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import StatWheel from './StatWheel';
 
-export default function StatSection() {
+export default function StatSection({ bare = false }) {
   const [animate, setAnimate] = useState(false);
   const ref = useRef(null);
 
@@ -18,9 +18,18 @@ export default function StatSection() {
     return () => observer.disconnect();
   }, []);
 
+  const wheel = (
+    <div ref={ref} className="p-4 flex items-center justify-center">
+      <div className="w-80 h-80">
+        <StatWheel animate={animate} />
+      </div>
+    </div>
+  );
+
+  if (bare) return wheel;
+
   return (
-    <div ref={ref} className="border border-border rounded-xl overflow-hidden bg-card">
-      {/* Title bar */}
+    <div className="border border-border rounded-xl overflow-hidden bg-card">
       <div className="border-b border-border px-5 py-3 bg-card-light flex items-center gap-3">
         <div className="flex gap-1.5">
           <span className="w-2.5 h-2.5 rounded-full" style={{ background: '#EF4444' }} />
@@ -30,13 +39,7 @@ export default function StatSection() {
         <span className="font-mono text-sm text-primary tracking-widest ml-1">Player Stats</span>
         <span className="ml-auto font-mono text-xs text-muted">LVL 21</span>
       </div>
-
-      {/* Wheel only */}
-      <div className="p-6 flex items-center justify-center">
-        <div className="w-96 h-96">
-          <StatWheel animate={animate} />
-        </div>
-      </div>
+      {wheel}
     </div>
   );
 }

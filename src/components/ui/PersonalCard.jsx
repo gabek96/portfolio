@@ -4,17 +4,17 @@ import { useEffect, useRef, useState } from 'react';
 // Each fact can use either an emoji OR an image/gif URL — add  image: 'https://...'
 // to any entry and it will display instead of the emoji.
 const FACTS = [
-  { category: 'Favorite Movie',   value: 'Spider-Man Across the Spider-Verse',   emoji: '🎬', image: 'https://i.ebayimg.com/images/g/x4YAAOSwWBBk-BfS/s-l1600.jpg' },
+  { category: 'Favorite Movie',   value: 'Spider-Man Across the Spider-Verse',   emoji: '🎬', image: 'https://upload.wikimedia.org/wikipedia/commons/9/9d/Spider-Man_ITSV.png' },
   { category: 'Favorite Pokémon', value: 'Greninja',      emoji: '⚡' , image: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e57c0ca5-c162-43e7-b0dc-40f215c30321/dkj3uf3-dda93834-5372-4956-814c-aa17dcd7479b.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi9lNTdjMGNhNS1jMTYyLTQzZTctYjBkYy00MGYyMTVjMzAzMjEvZGtqM3VmMy1kZGE5MzgzNC01MzcyLTQ5NTYtODE0Yy1hYTE3ZGNkNzQ3OWIuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.7wVbH-6B1A8sGyJBIPh1B8Y-8B1whFAC_hoM1sA4ZnQ'  },
-  { category: 'Favorite Game',    value: 'Your Favorite Game',    emoji: '🎮' },
-  { category: 'Favorite Food',    value: 'Your Favorite Food',    emoji: '🍕' },
+  { category: 'Basketball Team',    value: 'Denver Nuggets',    emoji: '🏀', image: 'https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcGowMGZyemtqMDN6amluam54bDV2eXc5ZzJvM3E4c3Q3eHg0OTlqcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5tL3kIwfxnTpDOUJl2/giphy.gif' },
+  { category: 'BBest Fast Food',    value: 'Chiptole',    emoji: '🍕' , image: 'https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXk5YmJ0eHN6bTMzMzR5bnh4c2lqMm96OTY2eGRrOTN6eW5sOXN3diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/l0Iy46j28Xi74FmmY/giphy.gif' },
   { category: 'Favorite Superhero', value: 'Spider-Man', emoji: '🦸‍♂️', image: 'https://www.fightersgeneration.com/characters3/spidey-walk1.gif' },
-  { category: 'Binge-Watching',   value: 'Your Fav Show',         emoji: '📺' },
+  { category: 'Binge-Watching',   value: 'One Piece',         emoji: '📺', image: 'https://upload.wikimedia.org/wikipedia/commons/f/f2/Logo_onepiece_2021.png' },
 ];
 
 const INTERVAL_MS = 3200;
 
-export default function PersonalCard() {
+export default function PersonalCard({ bare = false }) {
   const [index, setIndex] = useState(0);
   const [visible, setVisible] = useState(true);
   const timerRef = useRef(null);
@@ -52,9 +52,46 @@ export default function PersonalCard() {
 
   const fact = FACTS[index];
 
+  const content = (
+    <div className="flex-1 flex flex-col items-center justify-center p-8 text-center">
+      <div
+        style={{
+          opacity: visible ? 1 : 0,
+          transform: visible ? 'translateY(0)' : 'translateY(10px)',
+          transition: 'opacity 250ms ease, transform 250ms ease',
+        }}
+      >
+        {fact.image
+          ? <img src={fact.image} alt={fact.value} className="w-24 h-24 object-contain rounded-xl mb-5 mx-auto" />
+          : <div className="text-6xl mb-5">{fact.emoji}</div>
+        }
+        <p className="font-mono text-xs text-primary/60 uppercase tracking-[0.15em] mb-2">
+          {fact.category}
+        </p>
+        <p className="text-2xl font-bold text-text">{fact.value}</p>
+      </div>
+
+      <div className="flex items-center gap-2 mt-10">
+        {FACTS.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => handleDot(i)}
+            aria-label={`Go to fact ${i + 1}`}
+            className="h-2 rounded-full transition-all duration-300 cursor-pointer"
+            style={{
+              width: i === index ? '1.5rem' : '0.5rem',
+              background: i === index ? '#496580' : '#E0D6CC',
+            }}
+          />
+        ))}
+      </div>
+    </div>
+  );
+
+  if (bare) return content;
+
   return (
     <div className="border border-border rounded-xl overflow-hidden bg-card flex flex-col h-full">
-      {/* Title bar */}
       <div className="border-b border-border px-5 py-3 bg-card-light flex items-center gap-3 flex-shrink-0">
         <div className="flex gap-1.5">
           <span className="w-2.5 h-2.5 rounded-full" style={{ background: '#EF4444' }} />
@@ -63,42 +100,7 @@ export default function PersonalCard() {
         </div>
         <span className="font-mono text-sm text-primary tracking-widest ml-1">PLAYER INFO</span>
       </div>
-
-      {/* Fact display */}
-      <div className="flex-1 flex flex-col items-center justify-center p-8 text-center">
-        <div
-          style={{
-            opacity: visible ? 1 : 0,
-            transform: visible ? 'translateY(0)' : 'translateY(10px)',
-            transition: 'opacity 250ms ease, transform 250ms ease',
-          }}
-        >
-          {fact.image
-            ? <img src={fact.image} alt={fact.value} className="w-24 h-24 object-contain rounded-xl mb-5 mx-auto" />
-            : <div className="text-6xl mb-5">{fact.emoji}</div>
-          }
-          <p className="font-mono text-xs text-primary/60 uppercase tracking-[0.15em] mb-2">
-            {fact.category}
-          </p>
-          <p className="text-2xl font-bold text-text">{fact.value}</p>
-        </div>
-
-        {/* Dot indicators */}
-        <div className="flex items-center gap-2 mt-10">
-          {FACTS.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => handleDot(i)}
-              aria-label={`Go to fact ${i + 1}`}
-              className="h-2 rounded-full transition-all duration-300 cursor-pointer"
-              style={{
-                width: i === index ? '1.5rem' : '0.5rem',
-                background: i === index ? '#496580' : '#E0D6CC',
-              }}
-            />
-          ))}
-        </div>
-      </div>
+      {content}
     </div>
   );
 }

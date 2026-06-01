@@ -1,6 +1,7 @@
 import AnimatedSection from '../components/ui/AnimatedSection';
 import StatSection from '../components/ui/StatSection';
 import PersonalCard from '../components/ui/PersonalCard';
+import TypingText from '../components/ui/TypingText';
 
 export default function HomePage() {
   const basePath = import.meta.env.BASE_URL;
@@ -17,9 +18,11 @@ export default function HomePage() {
             Hi, I'm{' '}
             <span style={{
               color: '#496580',
-            }}>Gabriel Kiveu</span>!
+            }}>Gabriel Kiveu!</span>
           </h1>
-
+          <p className="text-lg text-muted mb-5 max-w-xl">
+            <TypingText text="Welcome to my portfolio page!" />
+          </p>
           <div className="flex gap-4 mb-5">
             <a
               href="https://github.com/gabek96"
@@ -40,9 +43,7 @@ export default function HomePage() {
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
             </a>
           </div>
-          <p className="text-xl text-muted font-light leading-relaxed mb-8 max-w-xl">
-            From idea to production — I build things that hold up.
-          </p>
+
           <div className="flex gap-4">
             <a
               href="#/projects"
@@ -69,14 +70,25 @@ export default function HomePage() {
         </AnimatedSection>
       </div>
 
-      {/* Stats + Personal card row */}
+      {/* Stats + Personal card — single container */}
       <AnimatedSection delay={300}>
-        <div className="flex flex-col lg:flex-row gap-5 items-stretch">
-          <div className="flex-1 min-w-0">
-            <StatSection />
+        <div className="border border-border rounded-xl overflow-hidden bg-card max-w-5xl ">
+          <div className="border-b border-border px-5 py-3 bg-card-light flex items-center gap-3">
+            <div className="flex gap-1.5">
+              <span className="w-2.5 h-2.5 rounded-full" style={{ background: '#EF4444' }} />
+              <span className="w-2.5 h-2.5 rounded-full" style={{ background: '#F59E0B' }} />
+              <span className="w-2.5 h-2.5 rounded-full" style={{ background: '#22C55E' }} />
+            </div>
+            <span className="font-mono text-sm text-primary tracking-widest ml-1">Player Stats</span>
+            <span className="ml-auto font-mono text-xs text-muted">LVL 21</span>
           </div>
-          <div className="lg:w-72 xl:w-100 flex flex-col">
-            <PersonalCard />
+          <div className="flex flex-col lg:flex-row items-stretch">
+            <div className="flex-1 min-w-0">
+              <StatSection bare />
+            </div>
+            <div className="lg:border-l border-t lg:border-t-0 border-border lg:w-72 xl:w-80 flex flex-col">
+              <PersonalCard bare />
+            </div>
           </div>
         </div>
       </AnimatedSection>
