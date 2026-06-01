@@ -52,7 +52,7 @@ export default function HomePage() {
               View Projects
             </a>
             <a
-              href={`${basePath}Gabriel_Kiveu_Resume.pdf`}
+              href={`${basePath}Gabriel_Kiveu.pdf`}
               download
               className="border border-primary text-primary px-6 py-3 rounded-lg font-bold hover:bg-primary hover:text-white transition-all duration-200"
             >

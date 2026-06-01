@@ -6,6 +6,7 @@ const links = [
   { to: '/about', label: 'About' },
   { to: '/work', label: 'Work Experience' },
   { to: '/projects', label: 'Projects' },
+  { to: '/resume', label: 'Resume' },
 ];
 
 export default function Navbar() {
@@ -47,16 +48,6 @@ export default function Navbar() {
               </NavLink>
             </li>
           ))}
-          <li>
-            <a
-              href={`${basePath}Gabriel_Kiveu_Resume.pdf`}
-              download
-              className="block px-4 py-2 rounded-full text-sm font-bold bg-primary text-white hover:bg-primary-dark hover:-translate-y-0.5 transition-all duration-200"
-            >
-              <i className="fas fa-download mr-1.5"></i>
-              Resume
-            </a>
-          </li>
         </ul>
 
       </div>
