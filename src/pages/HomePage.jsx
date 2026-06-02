@@ -9,7 +9,6 @@ export default function HomePage() {
   return (
     <section
       className="px-6 md:px-12 lg:px-20 py-10 md:py-16 flex flex-col gap-10"
-      style={{ background: 'linear-gradient(160deg, rgba(255,219,187,0.25) 0%, transparent 45%)' }}
     >
       {/* Hero row */}
       <div className="flex flex-col-reverse md:flex-row items-start gap-10">
@@ -17,7 +16,7 @@ export default function HomePage() {
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-text font-heading mb-2">
             Hi, I'm{' '}
             <span style={{
-              color: '#496580',
+              color: '#507687',
             }}>Gabriel Kiveu!</span>
           </h1>
           <p className="text-lg text-muted mb-5 max-w-xl">
@@ -72,8 +71,8 @@ export default function HomePage() {
 
       {/* Stats + Personal card — single container */}
       <AnimatedSection delay={300}>
-        <div className="border border-border rounded-xl overflow-hidden bg-card max-w-5xl ">
-          <div className="border-b border-border px-5 py-3 bg-card-light flex items-center gap-3">
+        <div className="border border-border rounded-xl overflow-hidden bg-background max-w-5xl ">
+          <div className="border-b border-border px-5 py-3 bg-background flex items-center gap-3">
             <div className="flex gap-1.5">
               <span className="w-2.5 h-2.5 rounded-full" style={{ background: '#EF4444' }} />
               <span className="w-2.5 h-2.5 rounded-full" style={{ background: '#F59E0B' }} />

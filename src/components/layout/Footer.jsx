@@ -1,13 +1,13 @@
 export default function Footer() {
   return (
-    <footer className="bg-card-light border-t border-border mt-16">
+    <footer className="bg-background border-t border-border mt-16">
       {/* CTA */}
       <div className="px-6 md:px-12 lg:px-20 py-14 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
         <div>
           <h2 className="text-2xl md:text-3xl font-bold text-text font-heading mb-1">
             Let's build something{' '}
             <span style={{
-              color: '#496580',
+              color: '#507687',
             }}>together.</span>
           </h2>
         </div>
