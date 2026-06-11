@@ -6,7 +6,7 @@ import ClubCard from '../components/ui/ClubCard';
 import AnimatedSection from '../components/ui/AnimatedSection';
 
 const SKILL_GROUPS = [
-  { label: 'Languages',    col: 'md:col-span-2', color: '#496580', names: ['C', 'Java', 'JavaScript', 'HTML/CSS', 'PHP', 'Python'] },
+  { label: 'Languages',    col: 'md:col-span-2', color: '#507687', names: ['C', 'Java', 'JavaScript', 'HTML/CSS', 'PHP', 'Python'] },
   { label: 'Frameworks',   col: 'md:col-span-1', color: '#c17c3a', names: ['React', 'React Native', 'Node.js', 'Nest.js'] },
   { label: 'Databases',    col: 'md:col-span-1', color: '#7c3aed', names: ['MySQL', 'PostgreSQL', 'MongoDB'] },
   { label: 'Cloud & Tools',col: 'md:col-span-2', color: '#2e7d6e', names: ['AWS', 'Google Cloud', 'Git'] },
