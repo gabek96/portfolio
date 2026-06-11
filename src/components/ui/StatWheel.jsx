@@ -2,8 +2,8 @@ import { useEffect, useRef, useState } from 'react';
 
 export const STATS = [
   { abbr: 'STR', label: 'Full-Stack',   value: 90 },
-{ abbr: 'END', label: 'DevOps',       value: 60 },
-  { abbr: 'DEX', label: 'Frontend',     value: 80 },
+{ abbr: 'END', label: 'Dancing',       value: 50 },
+  { abbr: 'DEX', label: 'Team-Player',     value: 80 },
   { abbr: 'WIS', label: 'Leadership',   value: 83 },
   { abbr: 'CHA', label: 'Chatterbox',     value: 110 },
   { abbr: 'INT', label: 'Funny',   value: 120 },  
