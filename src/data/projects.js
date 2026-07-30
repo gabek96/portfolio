@@ -1,4 +1,4 @@
-import { faCalendarDays, faChartBar, faGamepad, faBookOpen, faMap, faRobot, faStopwatch } from '@fortawesome/free-solid-svg-icons';
+import { faCalendarDays, faChartBar, faGamepad, faBookOpen, faMap, faRobot, faStopwatch, faEarListen } from '@fortawesome/free-solid-svg-icons';
 
 export const projects = [
   {
@@ -19,6 +19,23 @@ export const projects = [
   },
   {
     id: 2,
+    title: "Lumi (AI-Powered Screen Reader)",
+    faIcon: faEarListen,
+    accentColor: "#14b8a6",
+    date: "March 2026",
+    descriptions: [
+      'Built a <strong>Chrome Manifest V3</strong> extension for the <strong>Honeywell NSBE AI Impact-A-Thon</strong> at the NSBE Annual Convention — an accessible screen reader that reads web pages aloud with natural neural speech instead of raw text dumps.',
+      'Served as <strong>Backend Developer (Speech & Playback)</strong> on a 6-person team, wiring the <strong>AWS Polly</strong> neural TTS pipeline with <strong>AWS Signature V4</strong> request signing and driving audio playback from the extension\'s background service worker.',
+      'Integrated the <strong>Claude Haiku API</strong> to summarize and restructure page content before narration, with <strong>multilingual output</strong> and selectable communication registers (formal, conversational, simplified) to match each user\'s comprehension needs.',
+    ],
+    tools: ["JavaScript", "Chrome Extensions", "Claude API", "AWS Polly", "Git"],
+    links: {
+      github: "https://github.com/Mechamorph1903/Lumi",
+      slides: "https://1drv.ms/p/c/2c3ec920532c3101/IQA3a0fy-c3QSYV6GWlqKfR0AZfKQ4xwX5GyAiFPU5CS5fo?e=XfdmSi",
+    },
+  },
+  {
+    id: 3,
     title: "Makerspace Tracker",
     faIcon: faChartBar,
     accentColor: "#8b5cf6",
@@ -32,7 +49,7 @@ export const projects = [
     links: {},
   },
   {
-    id: 3,
+    id: 4,
     title: "One Step",
     faIcon: faGamepad,
     accentColor: "#22c55e",
@@ -49,7 +66,7 @@ export const projects = [
     },
   },
   {
-    id: 4,
+    id: 5,
     title: "Top-Shelf",
     faIcon: faBookOpen,
     accentColor: "#ef4444",
@@ -66,7 +83,7 @@ export const projects = [
     },
   },
   {
-    id: 5,
+    id: 6,
     title: "Cy-Hill",
     faIcon: faMap,
     accentColor: "#f59e0b",
@@ -82,7 +99,7 @@ export const projects = [
     },
   },
   {
-    id: 6,
+    id: 7,
     title: "R.A.D.C (Remote Autonomous Disaster Cleanup)",
     faIcon: faRobot,
     accentColor: "#06b6d4",
@@ -99,7 +116,7 @@ export const projects = [
     },
   },
   {
-    id: 7,
+    id: 8,
     title: "Time Counter",
     faIcon: faStopwatch,
     accentColor: "#a855f7",

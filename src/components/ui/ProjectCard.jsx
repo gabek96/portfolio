@@ -62,6 +62,16 @@ export default function ProjectCard({ project }) {
               <i className="fas fa-globe"></i> Website
             </a>
           )}
+          {project.links.slides && (
+            <a
+              href={project.links.slides}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-surface border border-border rounded-lg px-4 py-2 text-sm text-text hover:bg-border/50 hover:-translate-y-0.5 transition-all duration-200"
+            >
+              <i className="fas fa-file-powerpoint"></i> Slides
+            </a>
+          )}
           {project.links.youtube && (
             <a
               href={project.links.youtube}

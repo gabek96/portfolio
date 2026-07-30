@@ -1,6 +1,21 @@
 export const workExperience = [
   {
     id: 1,
+    title: "VR Makerspace Lab Assistant & Full-Stack Developer",
+    company: "Student Innovation Center · Iowa State University",
+    date: "Sep 2023 - Jul 2026",
+    timelineYear: "2023 - 2026",
+    bullets: [
+      'Designed and built the Makerspace Tracker from the ground up — a full-stack PHP and MySQL web platform that manages equipment access, attendance, and usage data for over 6,000 students and staff across the SIC.',
+      'Maintained and iterated on the platform over multiple semesters, resolving bugs, adding features, and keeping the system reliable for daily use across a high-traffic facility.',
+      'Diagnosed and resolved hardware and software issues across VR and 3D equipment, keeping tools consistently available for student research and creative projects.',
+      'Developed and delivered Making 101 workshop sessions on Virtual Reality, giving students hands-on exposure to XR technology and helping them apply it to their own work.',
+      'Collaborated with a team to design and produce VR demos using the Vive XR Elite, creating showcase-ready experiences that highlighted the lab\'s capabilities to the wider campus community.',
+    ],
+    tools: ["PHP", "MySQL", "Full-Stack Web Development", "Virtual Reality (VR)", "Hardware Troubleshooting", "Technical Training", "3D Printing", "Laser Cutting"],
+  },
+   {
+    id: 2,
     title: "Community & Research Full-Stack Developer",
     company: "Dinder, Iowa State University",
     date: "Fall 2025 - Spring 2026",
@@ -14,22 +29,6 @@ export const workExperience = [
     ],
     tools: ["React Native", "Expo", "Nest.js", "REST APIs", "AWS DynamoDB", "PostgreSQL", "Agile", "Full-Stack Development", "Mobile Development", "System Design"],
   },
-  {
-    id: 2,
-    title: "VR Makerspace Lab Assistant & Full-Stack Developer",
-    company: "Student Innovation Center · Iowa State University",
-    date: "Sep 2023 - Present",
-    timelineYear: "2023 - Present",
-    bullets: [
-      'Designed and built the Makerspace Tracker from the ground up — a full-stack PHP and MySQL web platform that manages equipment access, attendance, and usage data for over 6,000 students and staff across the SIC.',
-      'Maintained and iterated on the platform over multiple semesters, resolving bugs, adding features, and keeping the system reliable for daily use across a high-traffic facility.',
-      'Diagnosed and resolved hardware and software issues across VR and 3D equipment, keeping tools consistently available for student research and creative projects.',
-      'Developed and delivered Making 101 workshop sessions on Virtual Reality, giving students hands-on exposure to XR technology and helping them apply it to their own work.',
-      'Collaborated with a team to design and produce VR demos using the Vive XR Elite, creating showcase-ready experiences that highlighted the lab\'s capabilities to the wider campus community.',
-    ],
-    tools: ["PHP", "MySQL", "Full-Stack Web Development", "Virtual Reality (VR)", "Hardware Troubleshooting", "Technical Training", "3D Printing", "Laser Cutting"],
-  },
- 
   {
     id: 3,
     title: "Camp Counselor",
